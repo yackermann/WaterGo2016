@@ -49,7 +49,9 @@ class Point(db.Model):
     # Latitude
     latitude                     = db.Column(db.Float)
 
+    # Source
     # https://gs.niwa.co.nz/nemo/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=nemo:fchem_chemistry_metadata
+
     def __init__(self, site_desc, region,
         temperature, dissolved_oxygen_percent, dissolved_oxygen,
         instantaneous_discharge, turbidity_ntu, ph,

@@ -1,12 +1,6 @@
 from app import app, db, models
 from flask import jsonify
 
-@app.route('/')
-def hello_world():
-    return jsonify({
-        "hello": "world"
-    })
-
 available_regions = ['Nelson', 'Dunedin', 'Hamilton', 'Christchurch', 'Gisborne', 'Greymouth', 'Wanganui', 'Tekapo', 'Wellington', 'Turangi', 'Whangarei', 'Alexandra', 'Auckland', 'Rotorua', 'Havelock Nth']
 @app.route('/region')
 def return_available():

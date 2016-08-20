@@ -48,7 +48,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="waterGoStyles.css">
+   <link rel="stylesheet" href="waterGoStyles.css">
+    <link rel="stylesheet" href="waterGoSupport.css">
     
     <style>
     #view-source {
@@ -89,24 +90,35 @@
       </header>
 
 <!-- SIDE BAR -->
-      <div class="demo-drawer mdl-layout__drawer">
+    <div class="demo-drawer mdl-layout__drawer">
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
 
-          <a class="filter" href="">Filter</a>
-          <input type='text' name='username' size='20' placeholder='Suburb' />
-          <input type='text' name='username' size='20' placeholder='Water Area' />
-          
-          <select class="options">
-            <option value="" disabled selected>Swimmer</option>
-            <option value="1">Person</option>
-            <option value="2">Animal</option>
-            <option value="3">Person and Animal</option>
-          </select>
+            <a class="filter" href="">Filter</a>
+            <div class ="suburb">
+              <input type='text' class ="sub" name='username' size='20' placeholder='Suburb' />
+            </div>
             
+           <div class ="questions1">
+            <select class="options">
+              <option value="" disabled selected>Water Type</option>
+              <option value="1">River</option>
+              <option value="2">Lake</option>
+              <option value="3">Sea</option>
+            </select>
+          </div>
+
+            <select class="options">
+              <option value="" disabled selected>User</option>
+              <option value="1">Person</option>
+              <option value="2">Animal</option>
+              <option value="3">Person and Animal</option>
+            </select>
+          
+          </nav>
             <img src="images/legends.png" class="legend">
 
             <span class="visuallyhidden">Help</span></a>
-        </nav>
+        
       </div>
 
       <div id="map"></div>

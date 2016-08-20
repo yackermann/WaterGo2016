@@ -1,34 +1,44 @@
 .demo-navigation {
-	padding-left: 20px;
+	padding-left: 15px;
 	padding-right: 20px;
 }
 
 .legend{
-	width: 280px;
-	height: 580px;
+	width: 265px;
+	height: 428.5px;
 }
 
 .filter{
 	padding-top: 10px;
 	padding-left: 0px;
-	font-size: 20px
+	font-size: 20px;
 	color: #ffffff;
 	width: 100px;
 }
-
+.sub{
+	padding-left: 73px;
+	padding-right: 0px;
+}
 .main{
 	width: 220px;
 	height: 40px;
-  position: absolute;
-  left: 55%;
-  margin-left: -155px;
+    position: absolute;
+    left: 55%;
+    margin-left: -155px;
 }
 
 .questions1{
+	padding-top: 20px;
 	padding-bottom: 20px;
+
 }
 
 .suburb{
 	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.options{
+	width: 100%;
 	padding-bottom: 20px;
 }

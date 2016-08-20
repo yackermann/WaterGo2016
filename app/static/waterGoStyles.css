@@ -4753,7 +4753,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	height: 100%;
 	max-height: 100%;
 	position: absolute;
-	top: 65px;
+	top: 64px;
 	left: 0;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 	box-sizing: border-box;
@@ -4860,7 +4860,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	cursor: pointer;
 	font-size: 26px;
 	line-height: 56px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Asrial, sans-serif;
 	margin: 10px 12px;
 	top: 0;
 	left: 0;
@@ -7793,11 +7793,6 @@ iframe.heightSet {
 	height: 580px;
 }
 
-.options {
-	padding-top: 80px;
-	padding-bottom: 80px;
-	width: 100px;
-}
 
 .filter {
 	padding-top: 10px;

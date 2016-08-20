@@ -1,6 +1,10 @@
 WaterGo2016 - SoT Hackathon
 ===
 
+## Data sources used:
+
+ + [Access Freshwater Chemistry Data ("NRWQN")](https://teamwork.niwa.co.nz/pages/viewpage.action?pageId=38830500)
+
 ## Build
 
 Initialize virtual environment

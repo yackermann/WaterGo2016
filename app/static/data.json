@@ -1,0 +1,47 @@
+[
+    {
+        "name" : "Bob",
+        "safe" : false,
+        "reasons" : ["quality"],
+        "location": {
+            "lat" : 172.38676220887947,
+            "lng" : -41.76508843676791
+        }
+    },
+    {
+        "name" : "Bubu",
+        "safe" : true,
+        "reasons"  : [],
+        "location" : {
+            "lat" : 169.7479876011024,
+            "lng" : -46.237277570106414
+        }
+    },
+    {
+        "name" : "Bubebu?",
+        "safe" : true,
+        "reasons"  : [],
+        "location" : {
+            "lat" : 170.94168865655413,
+            "lng" : -44.16825453968301
+        }
+    },
+    {
+        "name" : "YoloSwim!!",
+        "safe" : false,
+        "reasons"  : ["chemicals"],
+        "location" : {
+            "lat" : 175.14255110689265,
+            "lng" : -39.786877359146
+        }
+    },
+    {
+        "name" : "HackFestLake!!",
+        "safe" : false,
+        "reasons"  : ["mentors"],
+        "location" : {
+            "lat" : 175.46978908,
+            "lng" : -40.43534838
+        }
+    }
+]

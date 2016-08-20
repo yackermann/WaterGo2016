@@ -49,11 +49,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="waterGoStyles.css">
-    <link rel="stylesheet" href="materialize.css">
-
-
-   <!-- <link rel="stylesheet" href="styles.css">
- -->
     
     <style>
     #view-source {
@@ -72,15 +67,12 @@
 <!-- code starts here -->
   
   <body>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="materialize.js"></script>
-    <script type="text/javascript" src="materialize.js"></script>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 
 <!-- HEADER -->
       <header class="demo-header mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">WaterGo</span>
+          <img src="images/finalWhite.png" class="main">
 
 <!-- SEARCH BAR IN HEADER -->
           <div class="mdl-layout-spacer"></div>
@@ -90,33 +82,34 @@
             </label>
             <div class="mdl-textfield__expandable-holder">
               <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+          
             </div>
           </div>
         </div>
       </header>
 
 <!-- SIDE BAR -->
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <div class="demo-drawer mdl-layout__drawer">
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
 
-          <a class="mdl-navigation__link" href="">Filter</a>
-          <input type='text' name='username' size='15' placeholder='Suburb' />
-          <input type='text' name='username' size='15' placeholder='Water Area' />
-          <input type='text' name='username' size='15' placeholder='Suburb' />
-
-          <select name="select">
-            <option value="value1">Value 1</option> 
-            <option value="value2" selected>Value 2</option>
-            <option value="value3">Value 3</option>
+          <a class="filter" href="">Filter</a>
+          <input type='text' name='username' size='20' placeholder='Suburb' />
+          <input type='text' name='username' size='20' placeholder='Water Area' />
+          
+          <select class="options">
+            <option value="" disabled selected>Swimmer</option>
+            <option value="1">Person</option>
+            <option value="2">Animal</option>
+            <option value="3">Person and Animal</option>
           </select>
+            
+            <img src="images/legends.png" class="legend">
 
             <span class="visuallyhidden">Help</span></a>
         </nav>
       </div>
      
 <!-- FOOTER -->
-      <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/dashboard/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a>
     <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
   </body>
 </html>

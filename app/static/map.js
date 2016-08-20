@@ -7,32 +7,30 @@ function initMap() {
         center: nzLatLon
     });
 
-    var marker = new google.maps.Marker({
+
+    // marker.addListener('click', function() {
+    //     map.setZoom(8);
+    //     map.setCenter(marker.getPosition());
+    // });
+
+    /*var marker = new google.maps.Marker({
         position: nzLatLon,
         map: map,
-        title: 'Hello World!'
-    });
-
-
-    marker.addListener('click', function() {
-        map.setZoom(8);
-        map.setCenter(marker.getPosition());
-    });
+        title: "Hello"
+    })*/
 
 
     $.getJSON('data.json', function (json) {
         for (var key in json) {
             if (json.hasOwnProperty(key)) {
                 var item = json[key];
-                markers.push({
-                    name: item.name,
-                    safe: item.safe,
-                    reason: item.reason,
-                    location: item.location
+                var mkr = new google.maps.Marker({
+                    position: item.location,
+                    map: map,
+                    title: item.name
                 });
+                markers.push(mkr);
             }
         }
     });
-
-
 }

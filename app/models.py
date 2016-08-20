@@ -84,3 +84,20 @@ class Point(db.Model):
 
     def get_coordinates(self):
         return str(self.latitude) + ',' + str(self.longitude) 
+
+    def safe(self):
+        if  self.ph < 7.6 and self.ph > 7.2:
+            return True
+
+        return False
+
+    def json(self):
+        return {
+            "name" :self.site_desc,
+            "safe" : self.safe(),
+            "reasons" : ["ph"],
+            "location": {
+                "lat" : self.latitude,
+                "lng" : self.longitude
+            }
+        }

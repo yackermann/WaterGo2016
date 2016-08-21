@@ -43,11 +43,12 @@
     }
 
 
-    // select.change(function(){
-    //     $('option:selected', select).each(function() {
-    //         console.log($(this).attr('value'))
-    //     });
-    // })
-    // get_regions();
+    select.change(function(){
+        $('option:selected', select).each(function() {
+            var region = $(this).attr('value');
+            get_markers(region);
+        });
+    })
+    get_regions();
     get_markers('Nelson');
 })()

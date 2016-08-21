@@ -28,7 +28,7 @@
 
     var get_markers = function (region) {
         remove_markers();
-        $.getJSON(/*'/region/' + region*/'data.json', function (data) {
+        $.getJSON('/region/' + region, function (data) {
             for (i = 0; i < data.length; i++) {
 
                 var item = data[i];
@@ -66,5 +66,4 @@
         });
     });
     get_regions();
-    get_markers('Nelson');
 })();

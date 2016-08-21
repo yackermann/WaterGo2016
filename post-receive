@@ -1,0 +1,36 @@
+#!/bin/bash
+
+LOCATION=/home/developer/repos/watergo
+APP=/applications/watergo
+VENVDIR='venv'
+
+if [ ! -d $APP ]; then
+    echo $APP - Does NOT exists
+    git clone $LOCATION $APP
+    cd $APP
+    git remote add upstream $LOCATION
+    git branch --set-upstream-to=upstream/master
+else
+    echo $APP - Folder exists:
+    cd $APP
+    pwd
+    git pull
+fi
+
+if [ ! -d $VENVDIR ]; then
+    # Virtual Env
+    virtualenv $VENVDIR
+fi
+
+source ./venv/bin/activate
+
+pip install -r requirements.txt
+
+# Reseting cookies
+python reset_cookie_key.py
+
+# Reseting DB
+rm flaskr.db
+python create_db.py
+
+cp $APP'/hooks/'* $LOCATION'/hooks/'

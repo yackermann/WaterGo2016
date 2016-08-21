@@ -7,9 +7,15 @@
         center: nzLatLon
     });
 
+    var remove_markers = function () {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+    }
 
 
     var get_markers = function (region) {
+        remove_markers();
         $.getJSON('/region/' + region, function (data) {
             for (i = 0; i < data.length; i++) {
 

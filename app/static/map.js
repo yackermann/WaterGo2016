@@ -7,32 +7,31 @@ function initMap() {
         center: nzLatLon
     });
 
-    var marker = new google.maps.Marker({
+
+
+    /*var marker = new google.maps.Marker({
         position: nzLatLon,
         map: map,
-        title: 'Hello World!'
-    });
+        title: "Hello"
+    })*/
 
 
-    marker.addListener('click', function() {
-        map.setZoom(8);
-        map.setCenter(marker.getPosition());
-    });
+    $.getJSON('data.json', function (data) {
+        for (i = 0; i < data.length; i++)
+        {
+            var item = data[i];
+            var mkr = new google.maps.Marker({
+                position: item.location,
+                map: map,
+                title: item.name
+            });
+            mkr.addListener('click', function (ev) {
+                console.log(mkr)
+                map.setZoom(10);
+                map.setCenter(this.getPosition());
+            });
 
-
-    $.getJSON('data.json', function (json) {
-        for (var key in json) {
-            if (json.hasOwnProperty(key)) {
-                var item = json[key];
-                markers.push({
-                    name: item.name,
-                    safe: item.safe,
-                    reason: item.reason,
-                    location: item.location
-                });
-            }
+            markers.push(mkr);
         }
     });
-
-
 }

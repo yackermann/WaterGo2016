@@ -4750,10 +4750,10 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 	width: 240px;
-	height: 100%;
+	height: 90.5%;
 	max-height: 100%;
 	position: absolute;
-	top: 65px;
+	top: 64px;
 	left: 0;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 	box-sizing: border-box;
@@ -4860,7 +4860,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 	cursor: pointer;
 	font-size: 26px;
 	line-height: 56px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Asrial, sans-serif;
 	margin: 10px 12px;
 	top: 0;
 	left: 0;
@@ -4869,8 +4869,9 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .mdl-layout__header .mdl-layout__drawer-button {
+	top: -8px;
 	position: absolute;
-	color: rgb(66, 66, 66);
+	color: white;
 	background-color: inherit
 }
 
@@ -6656,9 +6657,10 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple,
 	top: 16px
 }
 
+/*Line in the search*/
 .mdl-textfield__input {
 	border: none;
-	border-bottom: 1px solid rgba(0, 0, 0, .12);
+	border-bottom: 2px solid;
 	display: block;
 	font-size: 16px;
 	font-family: "Helvetica", "Arial", sans-serif;
@@ -6667,7 +6669,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple,
 	width: 100%;
 	background: 0 0;
 	text-align: left;
-	color: inherit
+	color: white;
 }
 
 .mdl-textfield__input[type="number"] {
@@ -7793,14 +7795,9 @@ iframe.heightSet {
 	height: 580px;
 }
 
-.options {
-	padding-top: 80px;
-	padding-bottom: 80px;
-	width: 100px;
-}
 
 .filter {
-	padding-top: 10px;
+	padding-top: 15px;
 	padding-left: 15px;
 	font-size: 20px;
 	color: #ffffff;

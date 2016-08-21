@@ -2,11 +2,24 @@
     var nzLatLon = {lat: -40.9006, lng: 174.8860};
     var markers = [];
 
+    var select = $('.select2');
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
         center: nzLatLon
     });
 
+    var get_regions = function () {
+        $.getJSON('/region', function (data) {
+            for (i = 0; i < data.length; i++) {
+
+                var region = data[i];
+
+                var new_option = '<option value="' + region + '">' + region + '</option>';
+                select.append(new_option);
+
+            }
+        });
+    }
 
 
     var get_markers = function (region) {
@@ -29,6 +42,6 @@
             }
         });
     }
-
+    get_regions();
     get_markers('Nelson');
 })()

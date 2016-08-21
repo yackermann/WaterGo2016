@@ -1,4 +1,4 @@
-function initMap() {
+(function() {
     var nzLatLon = {lat: -40.9006, lng: 174.8860};
     var markers = [];
 
@@ -9,29 +9,26 @@ function initMap() {
 
 
 
-    /*var marker = new google.maps.Marker({
-        position: nzLatLon,
-        map: map,
-        title: "Hello"
-    })*/
+    var get_markers = function (region) {
+        $.getJSON('/region/' + region, function (data) {
+            for (i = 0; i < data.length; i++) {
 
+                var item = data[i];
+                var mkr = new google.maps.Marker({
+                    position: item.location,
+                    map: map,
+                    title: item.name
+                });
 
-    $.getJSON('data.json', function (data) {
-        for (i = 0; i < data.length; i++)
-        {
-            var item = data[i];
-            var mkr = new google.maps.Marker({
-                position: item.location,
-                map: map,
-                title: item.name
-            });
-            mkr.addListener('click', function (ev) {
-                console.log(mkr)
-                map.setZoom(10);
-                map.setCenter(this.getPosition());
-            });
+                mkr.addListener('click', function (ev) {
+                    map.setZoom(10);
+                    map.setCenter(this.getPosition());
+                });
 
-            markers.push(mkr);
-        }
-    });
-}
+                markers.push(mkr);
+            }
+        });
+    }
+
+    get_markers('Nelson');
+})()

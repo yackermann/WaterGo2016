@@ -2,6 +2,7 @@ from app import app, db, models
 from flask import jsonify
 
 available_regions = ['Nelson', 'Dunedin', 'Hamilton', 'Christchurch', 'Gisborne', 'Greymouth', 'Wanganui', 'Tekapo', 'Wellington', 'Turangi', 'Whangarei', 'Alexandra', 'Auckland', 'Rotorua', 'Havelock Nth']
+
 @app.route('/region')
 def return_available():
     return jsonify(available_regions)

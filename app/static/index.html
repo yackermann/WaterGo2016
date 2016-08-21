@@ -1,0 +1,146 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!-- HEADER -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>WaterGO</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/logo.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/logo.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+<!--FAVICON-->
+  
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="waterGoStyles.css">
+    <link rel="stylesheet" href="waterGoSupport.css">
+    
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+
+
+<!-- code starts here -->
+  
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+<!-- HEADER -->
+      <header class="demo-header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <img src="images/finalWhite.png" class="main">
+
+<!-- SEARCH BAR IN HEADER -->
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+            <select class="select2 mdl-textfield__input" style="width: 100%"  id="search">
+                <option>Select region</option>
+            </select>
+          
+            </div>
+          </div>
+        </div>
+      </header>
+
+<!-- SIDE BAR -->
+    <div class="demo-drawer mdl-layout__drawer">
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+
+            <a class="filter" href="">Filter</a>
+            <div class ="suburb">
+              <select class="select2 mdl-textfield__input" style="width: 100%"  id="search">
+                <option>Select the region</option>
+              </select>
+            </div>
+            
+            <div class ="options">
+              <select class="options">
+                <option value="" disabled selected>Water Area</option>
+                <option value="1">River</option>
+                <option value="2">Lake</option>
+                <option value="3">Sea</option>
+              </select>
+            </div>
+
+            <select class="options">
+              <option value="" disabled selected>User</option>
+              <option value="1">Person</option>
+              <option value="2">Animal</option>
+              <option value="3">Person and Animal</option>
+            </select>
+          
+          </nav>
+            <img src="images/workaj.png" class="legend">
+
+            <span class="visuallyhidden">Help</span></a>
+        
+      </div>
+
+      <div id="map"></div>
+      <!-- Replace the value of the key parameter with your own API key. -->
+      <script src="jquery-3.1.0.min.js"></script>
+      <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh99iddIf3Ry6yMlAjgpFsuqcx6bb2138"></script>
+      <script src="map.js"></script>
+  </div>
+
+  <!-- <div class ="reco">
+    <ul>
+      <li> Recommendation</li>
+
+    </ul>
+
+  </div> -->
+<!-- FOOTER -->
+  </div>
+  </body>
+</html>

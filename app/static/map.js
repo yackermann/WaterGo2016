@@ -8,12 +8,17 @@
         center: nzLatLon
     });
 
+    var remove_markers = function () {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+    }
+    
     var get_regions = function () {
         $.getJSON('/region', function (data) {
             for (i = 0; i < data.length; i++) {
 
                 var region = data[i];
-
                 var new_option = '<option value="' + region + '">' + region + '</option>';
                 select.append(new_option);
 
@@ -22,6 +27,7 @@
     }
 
     var get_markers = function (region) {
+        remove_markers();
         $.getJSON('/region/' + region, function (data) {
             for (i = 0; i < data.length; i++) {
 
@@ -50,5 +56,5 @@
         });
     })
     get_regions();
-    get_markers('Nelson');
+    // get_markers('Nelson');
 })()

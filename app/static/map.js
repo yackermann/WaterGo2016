@@ -8,10 +8,6 @@ function initMap() {
     });
 
 
-    // marker.addListener('click', function() {
-    //     map.setZoom(8);
-    //     map.setCenter(marker.getPosition());
-    // });
 
     /*var marker = new google.maps.Marker({
         position: nzLatLon,
@@ -20,17 +16,22 @@ function initMap() {
     })*/
 
 
-    $.getJSON('data.json', function (json) {
-        for (var key in json) {
-            if (json.hasOwnProperty(key)) {
-                var item = json[key];
-                var mkr = new google.maps.Marker({
-                    position: item.location,
-                    map: map,
-                    title: item.name
-                });
-                markers.push(mkr);
-            }
+    $.getJSON('data.json', function (data) {
+        for (i = 0; i < data.length; i++)
+        {
+            var item = data[i];
+            var mkr = new google.maps.Marker({
+                position: item.location,
+                map: map,
+                title: item.name
+            });
+            mkr.addListener('click', function (ev) {
+                console.log(mkr)
+                map.setZoom(10);
+                map.setCenter(this.getPosition());
+            });
+
+            markers.push(mkr);
         }
     });
 }

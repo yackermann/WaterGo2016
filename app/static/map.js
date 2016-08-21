@@ -21,7 +21,6 @@
         });
     }
 
-
     var get_markers = function (region) {
         $.getJSON('/region/' + region, function (data) {
             for (i = 0; i < data.length; i++) {
@@ -42,6 +41,13 @@
             }
         });
     }
-    get_regions();
+
+
+    // select.change(function(){
+    //     $('option:selected', select).each(function() {
+    //         console.log($(this).attr('value'))
+    //     });
+    // })
+    // get_regions();
     get_markers('Nelson');
 })()

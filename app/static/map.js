@@ -8,10 +8,6 @@ function initMap() {
     });
 
 
-    // marker.addListener('click', function() {
-    //     map.setZoom(8);
-    //     map.setCenter(marker.getPosition());
-    // });
 
     /*var marker = new google.maps.Marker({
         position: nzLatLon,
@@ -29,6 +25,14 @@ function initMap() {
                     map: map,
                     title: item.name
                 });
+                mkr.addListener('click', function(ev) {
+                    //console.log(ev)
+
+                    console.log(mkr)
+                    map.setZoom(10);
+                    map.setCenter(this.getPosition());
+                });
+
                 markers.push(mkr);
             }
         }
